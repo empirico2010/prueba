@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Login</title>
+    </h:head>
+    <h:body>
+        <center><h1>Login</h1></center>
+        <center>
+            <h:form>
+                <h2>Entrar</h2>
+                <p>Ingresa la información necesaria</p>
+                <h:panelGrid columns="3">
+                <h:outputText value="Usuario:"></h:outputText>
+                <h:inputText id="UsuarioInputText" required="true" requiredMessage="Debe completar el campo Usuario"validatorMessage="El campo debe ser superior a 8 caracteres">
+                    <f:validateLength minimum="8"></f:validateLength>
+                </h:inputText>
+                <h:message for="UsuarioInputText"></h:message>
+                
+                 <h:outputText value="Contraseña:"></h:outputText>
+                 <h:inputText id="PasswordInputText"required="true" requiredMessage="Debe completar el campo Contraseña"validatorMessage="El campo debe ser superior a 8 caracteres">
+                    <f:validateLength minimum="8" maximum="8"></f:validateLength>    
+                 </h:inputText>
+                 <h:message for="PasswordInputText"></h:message>
+                </h:panelGrid>
+                
+                <h:commandButton value="Ingresar"></h:commandButton>
+            </h:form>
+        </center>
+    </h:body>
+</html>
+
